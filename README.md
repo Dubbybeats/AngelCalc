@@ -11,6 +11,6 @@ A simple calculator made using `tkinter`.
 
 | `+`   | `-`  | `*`  | `/`  |
 |:-:|---|---|---|
-| `exp`  |  `x!` | `^2`  |  `%` |
+| `.`  |  `C` | `+-`  |  `%` |
 
 * Supports `undo` and `AC`
