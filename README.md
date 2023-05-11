@@ -13,4 +13,4 @@ A simple calculator made using `tkinter`.
 |:-:|---|---|---|
 | `.`  |  `C` | `+-`  |  `%` |
 
-* Supports `undo` and `AC`
+
