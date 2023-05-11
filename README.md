@@ -13,4 +13,6 @@ A simple calculator made using `tkinter`.
 |:-:|---|---|---|
 | `.`  |  `C` | `+-`  |  `%` |
 
+## Usage: 
+
 ![Usage](https://github.com/Dubbybeats/AngelCalc/blob/main/Animation.gif)
