@@ -1,4 +1,5 @@
 import tkinter as tk
+import re
 
 # AboutWindow: A subclass of Toplevel that displays information about the calculator
 class AboutWindow(tk.Toplevel):
@@ -25,12 +26,12 @@ class SimpleCalculator(tk.Tk):
 
     # create_widgets: Set up the calculator's interface by configuring the background, creating buttons, and setting up grid layout
     def create_widgets(self):
-        self.configure(bg="black")
+        self.configure(bg="#ffe6f2")  # Soft pink background for a kawaii vibe
 
         # result_var: A StringVar that stores the text displayed in the entry field
         self.result_var = tk.StringVar()
 
-        # Create an Entry widget for displaying the calculation result
+        # Create an Entry widget for both entering expressions and displaying results ♡
         self.entry = tk.Entry(self, textvariable=self.result_var, justify='right')
         self.entry.grid(row=0, column=0, columnspan=5, sticky='news')
 
@@ -45,11 +46,19 @@ class SimpleCalculator(tk.Tk):
 
         # Create the buttons and add them to the grid
         for (text, row, col) in buttons:
-            button = tk.Button(self, text=text, command=lambda t=text: self.on_button_click(t), bg="blue", fg="white")
+            button = tk.Button(
+                self,
+                text=text,
+                command=lambda t=text: self.on_button_click(t),
+                bg="#ffb6c1",
+                fg="black",
+            )
             button.grid(row=row, column=col, sticky='news')
 
         # Create an About button that opens the AboutWindow
-        about_button = tk.Button(self, text="About", command=self.open_about_window, bg="blue", fg="white")
+        about_button = tk.Button(
+            self, text="About", command=self.open_about_window, bg="#ffb6c1", fg="black"
+        )
         about_button.grid(row=4, column=4, sticky='news')
 
         # Configure the grid rows and columns to have equal weight
@@ -91,6 +100,10 @@ class SimpleCalculator(tk.Tk):
         else:
             # Append the button_text to the existing text in the entry field
             current_text = self.result_var.get()
+            if button_text == '.':
+                last_token = re.split(r'[+\-*/]', current_text)[-1]
+                if '.' in last_token:
+                    return
             self.result_var.set(current_text + button_text)
 
     # open_about_window: Open the AboutWindow when the "About" button is clicked

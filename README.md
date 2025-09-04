@@ -1,5 +1,5 @@
-# AngelCalc
-A simple calculator made using `tkinter`. 
+# AngelCalc ✨
+A simple calculator made using `tkinter` (＾▽＾) ♡.
 
 ## Features : 
 
@@ -20,7 +20,7 @@ A simple calculator made using `tkinter`.
 ## To-do
 
 * [x] refactoring for adding `classes`
-* [ ] adding other mathematical functions (eg: `log`, `ln` et el)
+* [ ] adding other mathematical functions (eg: `log`, `ln` etc.)
 * [ ] increasing the font for the GUI
 * [ ] Adding a `.exe` release for windows based systems.(currently has executable for `*nix` based systems)
 User Manual for Angel's Calculator
